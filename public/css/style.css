@@ -5,7 +5,7 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    background: transparent linear-gradient(180deg, #3D8EF3 0%, #2251B9 100%) 0% 0% no-repeat padding-box;
+    background:   #00C896 ;
 
     display: flex;
     flex-direction: row;
@@ -13,45 +13,62 @@ body {
     align-items: center;
 }
 
-.logo {
-    width: 50%;
-    text-align: center;
-}
 
-.login-container {
-    width: 50%;
-}
+label{
+    font-family: 'Kaisei Opti';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 52px;
 
+color: #000000;
+
+
+}
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 40vh;
+    width: 120%;
+    height: 50vh;
 
-    background: #FFFFFFE0 0% 0% no-repeat padding-box;
-    box-shadow: 0px 6px 6px #00000029;
+    background: #CCC5C5 0% 0% no-repeat padding-box;
+    box-shadow: none;
     border: 1px solid #707070;
-    border-radius: 33px;
+    
 }
 
 button {
-    background: transparent linear-gradient(180deg, #3D8EF3 0%, #2251B9 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 19px;
+    background: #CCC5C5 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+    
 
     width: 50%;
-    border: none;
-    color: white;
-    margin: 1em;
+    
+    color: rgb(0, 0, 0);
+    font-family: 'Kaisei Opti';
+    font-style: normal;
+font-weight: 400;
+    margin: 3em;
     line-height: 2.5em;
 }
 
 input {
-    background-color: transparent;
+    text-align: center;
+    background-color:linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    font-family: 'Kaisei Opti';
+    font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 15px;
+
+color: rgba(0, 0, 0, 0.5);
+
     border: none;
-    border-bottom: 1px solid gray;
+    
     padding: 1em;
     margin: 1em;
     width: 50%;
@@ -67,8 +84,7 @@ input {
         font-size: 36px;
     }
 
-    .login-container,
-    .logo {
+    .login-container, .logo {
         width: 100%;
     }
 
@@ -81,3 +97,5 @@ input {
         margin: 2em;
     }
 }
+
+
