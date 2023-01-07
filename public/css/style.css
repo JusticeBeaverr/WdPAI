@@ -98,4 +98,59 @@ color: rgba(0, 0, 0, 0.5);
     }
 }
 
+.base-container {
+    display: f;
+    align-items: center;
+    width: 100vh;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 10px 40px 10px 70px;
+    border-left: none;
+    border-right: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ nav ul div.items{
+  padding: 0 25px;
+  display: inline-flex;
+ }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  section {
+    width: 30%;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  section h2 {
+    margin: 0;
+  }
+  
+  section img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
 
