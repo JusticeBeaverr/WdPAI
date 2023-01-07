@@ -25,7 +25,7 @@ color: #000000;
 
 
 }
-form {
+.login-container>form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,7 @@ form {
     
 }
 
-button {
+button{
     background: #CCC5C5 0% 0% no-repeat padding-box;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -98,59 +98,122 @@ color: rgba(0, 0, 0, 0.5);
     }
 }
 
-.base-container {
-    display: f;
+
+.base-container{
+    background: #CCC5C5;
+    display: flex;
     align-items: center;
-    width: 100vh;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav{
+    width: 20vw;
+    height: 100%;
+    background-color:#00C896 ;
+    box-shadow: none;
+    border: 1px solid #707070;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main{
+    width: 80vw;
     
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: lightblue;
-    padding: 10px 40px 10px 70px;
-    border-left: none;
-    border-right: none;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  
- nav ul div.items{
-  padding: 0 25px;
-  display: inline-flex;
- }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  section {
-    width: 30%;
-    background-color: white;
-    box-shadow: 2px 2px 5px grey;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-  section h2 {
-    margin: 0;
-  }
-  
-  section img {
+a{
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+    
+}
+
+li i{
+    font-size: 2 em;
+    color: #000000;  
+}
+
+.button{
+    background: #CCC5C5;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: black;
+    width: 60%;
+    
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Kaisei Opti';
+    letter-spacing: 0.72px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    
+}
+
+li{
+    text-align: left;
+    margin-bottom: 1em;
+
+}
+
+li:last-child{
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: auto;
-    margin-top: 10px;
-  }
+}
 
+.fa, .fas {
+    font-weight: 100%;
+    width: 1 em;
+}
 
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+    border-bottom: 1xp solid gray;
+}
+
+.add-event{
+    background: #CCC5C5 0% 0% no-repeat padding-box;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 20%;
+
+}
+.add-event > i{
+    padding: 1em;
+}
+
+.search-bar{
+    width: 70%;
+
+}
+
+.search-bar>form>input{
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: 'Kaisei Opti';
+    
+   
+
+}

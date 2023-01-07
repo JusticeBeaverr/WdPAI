@@ -1,4 +1,4 @@
-section {
+section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
@@ -6,27 +6,30 @@ section {
     overflow: auto;
 }
 
-.projects>div>img {
+section>div>img{
     height: 50%;
     width: 100%;
     object-fit: cover;
-    border-radius: 1em 1em 0 0;
+    
 }
-
-.projects>div>div {
+section>div>div{
     height: 50%;
+    width: 100%;
+    
+   
     margin: 1em;
-    color: #2699FB;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 }
 
-.projects>div {
-    border: 1px solid gray;
-    border-radius: 1em 1em 0 0;
-    height: 400px;
+.events>div{
+ border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color:#00C896 ;
+
 }
