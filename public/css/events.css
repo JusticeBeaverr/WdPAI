@@ -1,4 +1,4 @@
-section{
+section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
@@ -6,17 +6,18 @@ section{
     overflow: auto;
 }
 
-section>div>img{
+section>div>img {
     height: 50%;
     width: 100%;
     object-fit: cover;
-    
+
 }
-section>div>div{
+
+section>div>div {
     height: 50%;
     width: 100%;
-    
-   
+
+
     margin: 1em;
     display: flex;
     flex-direction: column;
@@ -24,12 +25,12 @@ section>div>div{
 
 }
 
-.events>div{
- border: 1px solid #000000;
+.events>div {
+    border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color:#00C896 ;
+    background-color: #00C896;
 
 }
