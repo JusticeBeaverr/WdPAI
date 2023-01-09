@@ -9,11 +9,20 @@
     <div class="container">
 
         <div class="login-container">
-            <form>
+            <form class="login" action="login" method="POST">
+                <div class="messages">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <label for="login">Signin</label>
                 <input name="username" type="text" placeholder="Username">
                 <input name="password" type="password" placeholder="Password">
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </div>
