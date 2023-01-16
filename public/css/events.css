@@ -34,3 +34,14 @@ section>div>div {
     background-color: #00C896;
 
 }
+
+section.events-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.events-form>form{
+    display: flex;
+    flex-direction: column;
+}

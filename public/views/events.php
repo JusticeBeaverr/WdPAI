@@ -50,59 +50,12 @@
 
             </header>
             <section class="events">
-                <div id="event-1">
-                    <img src="../img/uploads/koncert.jpg">
-                    <div>
-                        <h2>Title</h2>
-                        <p>desciption</p>
-                        <div class=attendence>
-                            <i class="fa-sharp fa-solid fa-check">3</i>
-                            <i class="fa-sharp fa-solid fa-question">2</i>
-                            <i class="fa-sharp fa-solid fa-xmark">2</i>
-                        </div>
-                    </div>
-                </div>
-                <div id="event-2">
-                    <img src="../img/uploads/koncert.jpg">
-                    <div>
-                        <h2>Title</h2>
-                        <p>desciption</p>
-                        <div class=attendence>
-                            <i class="fa-sharp fa-solid fa-check">3</i>
-                            <i class="fa-sharp fa-solid fa-question">2</i>
-                            <i class="fa-sharp fa-solid fa-xmark">2</i>
-                        </div>
-                    </div>
-                </div>
-                <div id="event-3">
-                    <img src="../img/uploads/koncert.jpg">
-                    <div>
-                        <h2>Title</h2>
-                        <p>desciption</p>
-                        <div class=attendence>
-                            <i class="fa-sharp fa-solid fa-check">3</i>
-                            <i class="fa-sharp fa-solid fa-question">2</i>
-                            <i class="fa-sharp fa-solid fa-xmark">2</i>
-                        </div>
-                    </div>
-                </div>
-                <div id="event-4">
-                    <img src="../img/uploads/koncert.jpg">
-                    <div>
-                        <h2>Title</h2>
-                        <p>desciption</p>
-                        <div class=attendence>
-                            <i class="fa-sharp fa-solid fa-check">3</i>
-                            <i class="fa-sharp fa-solid fa-question">2</i>
-                            <i class="fa-sharp fa-solid fa-xmark">2</i>
-                        </div>
-                    </div>
-                </div>
                 <div id="event-5">
-                    <img src="../img/uploads/koncert.jpg">
+                    <img src="public/uploads/<?= $event -> getImage() ?>">
                     <div>
-                        <h2>Title</h2>
-                        <p>desciption</p>
+                        <h2><?=$event -> getTitle() ?></h2>
+                        <p><?= $event -> getDescription() ?></p>
+                        <p><?= $event -> getDate() ?></p>
                         <div class=attendence>
                             <i class="fa-sharp fa-solid fa-check">3</i>
                             <i class="fa-sharp fa-solid fa-question">2</i>

@@ -9,5 +9,6 @@ $path = parse_url( $path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('events', 'DefaultController');
 Routing::post('login', 'SecurityController');
+Routing::post('addEvent', 'EventController');
 
 Routing::run($path);

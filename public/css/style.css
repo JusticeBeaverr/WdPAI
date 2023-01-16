@@ -56,9 +56,8 @@ font-weight: 400;
     line-height: 2.5em;
 }
 
-input {
+input, textarea {
     text-align: center;
-    background-color:linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
     font-family: 'Kaisei Opti';
     font-size: 15px;
 font-style: normal;
@@ -217,3 +216,4 @@ header{
    
 
 }
+
