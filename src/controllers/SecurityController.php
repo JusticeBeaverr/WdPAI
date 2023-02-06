@@ -2,17 +2,12 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
-require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/UserRepository.php';
 class SecurityController extends AppController{
-    private UserRepository $userRepository;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->userRepository = new UserRepository();
-    }
     public function login()
     {
+        $userRepository = new UserRepository();
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -27,11 +22,10 @@ class SecurityController extends AppController{
         }
 
         if (!password_verify($password, $user->getPassword())) {
-            return $this->render('login', ['messages' => ['Wrong password!']]);
+            return $this->render('password', ['messages' => ['Wrong password!']]);
         }
 
-        $_SESSION['user_id'] = $this->userRepository->getId();
-        $_SESSION['user_details'] = $user->getName() . ' ' . $user->getSurname();
+
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/events");
