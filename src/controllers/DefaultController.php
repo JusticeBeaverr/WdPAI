@@ -10,9 +10,5 @@ class DefaultController extends AppController{
 
     }
 
-    public function events(){
-        $this->render('events');
-
-    }
     
 }

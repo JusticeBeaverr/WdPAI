@@ -185,7 +185,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1em 1em;
-    border-bottom: 1xp solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .add-event{
@@ -215,5 +215,12 @@ header{
     
    
 
+}
+
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }
 

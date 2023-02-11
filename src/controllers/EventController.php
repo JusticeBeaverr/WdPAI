@@ -2,13 +2,27 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Event.php';
+require_once __DIR__ . '/../repository/EventRepository.php';
 
 class EventController extends AppController{
+    private EventRepository $eventRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->eventRepository = new EventRepository();
+    }
     const MAX_FILE_SIZE = 1024*1024;
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $messages = [];
+
+    public function events()
+    {
+        $events = $this->eventRepository->getEvents();
+        $this->render('events', ['events' => $events]);
+    }
     public function addEvent()
     {
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -19,10 +33,25 @@ class EventController extends AppController{
 
             // TODO create new project object and save it in database
             $event = new Event($_POST['title'], $_POST['description'], $_POST['date'], $_FILES['file']['name']);
+            $this->eventRepository->addEvent($event);
 
             return $this->render('events', ['messages' => $this->messages, "event"=>$event]);
         }
         return $this->render('add-Event', ['messages' => $this->messages]);
+    }
+    public function search()
+    {
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if ($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            echo json_encode($this->eventRepository->getEventByTitle($decoded['search']));
+        }
     }
 
     private function validate(array $file): bool
@@ -38,6 +67,9 @@ class EventController extends AppController{
         }
         return true;
     }
+
+
+
 
 
 }
