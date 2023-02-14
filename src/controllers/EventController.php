@@ -23,6 +23,11 @@ class EventController extends AppController{
         $events = $this->eventRepository->getEvents();
         $this->render('events', ['events' => $events]);
     }
+    public function myEvents()
+    {
+        $events = $this->eventRepository->getMyEvents();
+        $this->render('events', ['events' => $events]);
+    }
     public function addEvent()
     {
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -31,8 +36,7 @@ class EventController extends AppController{
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            // TODO create new project object and save it in database
-            $event = new Event($_POST['title'], $_POST['description'], $_POST['date'], $_FILES['file']['name']);
+            $event = new Event($_POST['title'], $_POST['description'], $_FILES['file']['name'], $_POST['date'], $_POST['location']);
             $this->eventRepository->addEvent($event);
 
             return $this->render('events', ['messages' => $this->messages, "event"=>$event]);
@@ -66,6 +70,38 @@ class EventController extends AppController{
             return false;
         }
         return true;
+    }
+
+    public function like(int $id)
+    {
+        require('public/views/sessionValidator.php');
+        $this->eventRepository->like($id);
+        http_response_code(200);
+    }
+
+    public function dislike(int $id)
+    {
+        require('public/views/sessionValidator.php');
+        $this->eventRepository->dislike($id);
+        http_response_code(200);
+    }
+
+    public function uncertain(int $id)
+    {
+        require('public/views/sessionValidator.php');
+        $this->eventRepository->uncertain($id);
+        http_response_code(200);
+    }
+
+    public function admin()
+    {
+        $this->render('admin');
+    }
+
+    public function deleteEvent()
+    {
+        $this->eventRepository->deleteEvent($_POST['id']);
+        $this->admin();
     }
 
 

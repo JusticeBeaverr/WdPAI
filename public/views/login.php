@@ -7,7 +7,6 @@
 
 <body>
     <div class="container">
-
         <div class="login-container">
             <form class="login" action="login" method="POST">
                 <div class="messages">
@@ -23,7 +22,17 @@
                 <input name="username" type="text" placeholder="Username">
                 <input name="password" type="password" placeholder="Password">
                 <button type="submit">Submit</button>
+                <button class="home">
+                    <a href="register">SignUp</a>
+                </button>
             </form>
         </div>
     </div>
 </body>
+
+<style>
+
+    a{
+        color: black;
+    }
+</style>

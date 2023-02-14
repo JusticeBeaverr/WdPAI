@@ -4,6 +4,9 @@ namespace repository;
 
 
 use Database;
+use Event;
+use PDO;
+use PDOStatement;
 
 require_once __DIR__.'/../../Database.php';
 class Repository

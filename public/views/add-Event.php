@@ -9,48 +9,21 @@
 
 <body>
 <div class="base-container">
-    <nav>
-        <ul>
-            <li>
-                <i class="fa-sharp fa-solid fa-calendar-days"></i>
-                <a href="a" class="button">Events</a>
-            </li>
-            <li>
-                <i class="fa-sharp fa-solid fa-calendar-days"></i>
-                <a href="a" class="button">My Events</a>
-            </li>
-            <li>
-                <i class="fa-sharp fa-solid fa-bell"></i>
-                <a href="a" class="button">Notifications</a>
-            </li>
-            <li>
-                <i class="fa-sharp fa-solid fa-toolbox"></i>
-                <a href="a" class="button">Admin</a>
-            </li>
-            <li>
-                <i class="fa-sharp fa-solid fa-gear"></i>
-                <a href="a" class="button">Settings</a>
-            </li>
-
-        </ul>
-
-    </nav>
+    <?php require('public/views/layout.php'); ?>
     <main>
         <header>
             <div class="search-bar">
-                <form>
-                    <input placeholder="Search Event">
-                </form>
-
-            </div>
-            <div class="add-Event">
-                <i class="fa-light fa-plus"></i>
-                Add Event
+                <input class="search" type="text" placeholder="Search Event">
             </div>
 
+            <div class="add-event">
+                <a href="addEvent">
+                    <i class="fa-solid fa-plus"></i>
+                    Add event
+                </a>
+            </div>
         </header>
         <section class="events-form">
-
            <h1>UPLOAD</h1>
             <form action="addEvent" method="POST" enctype="multipart/form-data">
                 <div class="messages">
@@ -63,7 +36,8 @@
                     ?>
                 </div>
                 <input name="title" type="text" placeholder="title">
-                <input name="date" type="text" placeholder="date">
+                <input name="date" type="date" placeholder="date">
+                <input name="location" type="text" placeholder="location">
                 <textarea name="description" rows="5" placeholder="description"></textarea>
 
                 <input type="file" name="file">
@@ -74,3 +48,25 @@
     </main>
 </div>
 </body>
+
+<style>
+    .add-event{
+        background: #CCC5C5 0% 0% no-repeat padding-box;
+        border: 1px solid black;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.1em;
+        text-align: center;
+        width: 20%;
+
+
+    }
+    .add-event > i{
+        padding: 1em;
+    }
+
+    .search-bar{
+        width: 70%;
+
+
+    }
+</style>

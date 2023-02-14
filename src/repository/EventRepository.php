@@ -10,21 +10,17 @@ class EventRepository extends Repository
 
     public function addEvent(Event $event): void
     {
-        $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO events (title, description, image, date, id_assigned_by)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO events (title, description,id_assigned_by, date, image, location)
+            VALUES (?, ?, ?, ?, ?, ?)
         ');
-
-        //TODO you should get this value from logged user session
-        $assignedById = 1;
-
         $stmt->execute([
-            $event->getTitle(),
-            $event->getDescription(),
-            $event->getImage(),
-            $date->format('Y-m-d'),
-            $assignedById
+                $event->getTitle(),
+                $event->getDescription(),
+                $_SESSION['user_id'],
+                $event->getDate(),
+                $event->getImage(),
+                $event->getLocation()
         ]);
     }
 
@@ -39,9 +35,14 @@ class EventRepository extends Repository
         foreach ($events as $event){
             $result[]=new Event(
                 $event["title"],
-                $event["date"],
                 $event["description"],
-                $event["image"]
+                $event["image"],
+                $event["date"],
+                $event["location"],
+                $event["like"],
+                $event["dislike"],
+                $event["uncertain"],
+                $event["id"]
             );
         }
 
@@ -59,7 +60,7 @@ class EventRepository extends Repository
     }
 
 
-    public function getEventByTitle(string $searchString): false|array
+    public function getEventByTitle(string $searchString)
     {
         $searchString = '%' . strtolower($searchString) . '%';
         $stmt = $this->database->connect()->prepare(
@@ -70,15 +71,6 @@ class EventRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getUsersEvents(): false|array
-    {
-        $stmt = $this->database->connect()->prepare(
-            'SELECT id_event FROM users_events WHERE id_user = :user_id'
-        );
-        $stmt->bindParam(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 
     public function like(int $id)
     {

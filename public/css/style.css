@@ -16,12 +16,12 @@ body {
 
 label{
     font-family: 'Kaisei Opti';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 52px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 52px;
 
-color: #000000;
+    color: #000000;
 
 
 }
@@ -36,7 +36,7 @@ color: #000000;
     background: #CCC5C5 0% 0% no-repeat padding-box;
     box-shadow: none;
     border: 1px solid #707070;
-    
+
 }
 
 button{
@@ -44,14 +44,14 @@ button{
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 15px;
-    
+
 
     width: 50%;
-    
+
     color: rgb(0, 0, 0);
     font-family: 'Kaisei Opti';
     font-style: normal;
-font-weight: 400;
+    font-weight: 400;
     margin: 3em;
     line-height: 2.5em;
 }
@@ -60,40 +60,81 @@ input, textarea {
     text-align: center;
     font-family: 'Kaisei Opti';
     font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
 
-color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 
     border: none;
-    
+
     padding: 1em;
     margin: 1em;
     width: 50%;
 }
 
 
+
+
 @media only screen and (max-device-width: 420px) {
-    .container {
+
+    .base-container {
         flex-direction: column;
+        align-content: flex-start;
     }
 
-    * {
-        font-size: 36px;
-    }
-
-    .login-container, .logo {
+    nav, main {
         width: 100%;
     }
 
-    form {
-        margin: auto;
+    section {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
     }
 
-    img {
-        height: 7em;
-        margin: 2em;
+    main {
+        height: 90vh;
+    }
+
+
+    ul {
+        top: 240px;
+        position: absolute;
+        height: 102vh;
+        background-color: gray;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        right: 0;
+        justify-content: flex-start;
+        gap: 5vh;
+        display: none;
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    li:last-child {
+        position: relative;
+    }
+
+    li {
+        height: 5vh;
+    }
+
+    .button {
+        width: 80vw;
+        font-size: 50px;
+    }
+
+    .title-bar{
+        font-size: 30px;
+    }
+
+    .add-event i {
+        font-size: 25px;
     }
 }
 
@@ -120,19 +161,20 @@ nav{
 
 main{
     width: 80vw;
-    
+
 }
 
 a{
     text-decoration: none;
     display: inline-block;
     line-height: 2em;
-    
+    color: black;
+
 }
 
 li i{
-    font-size: 2 em;
-    color: #000000;  
+    font-size: 2em;
+    color: #000000;
 }
 
 .button{
@@ -144,7 +186,7 @@ li i{
     letter-spacing: 0.5px;
     color: black;
     width: 60%;
-    
+
 }
 
 ul {
@@ -155,7 +197,7 @@ ul {
     margin: 0 auto;
     padding: 0;
     position: relative;
-    
+
 }
 
 li{
@@ -171,8 +213,8 @@ li:last-child{
 }
 
 .fa, .fas {
-    font-weight: 100%;
-    width: 1 em;
+    font-weight: lighter;
+    width: 1em;
 }
 
 main{
@@ -196,6 +238,7 @@ header{
     text-align: center;
     width: 20%;
 
+
 }
 .add-event > i{
     padding: 1em;
@@ -203,6 +246,7 @@ header{
 
 .search-bar{
     width: 70%;
+    padding: 1em;
 
 }
 
@@ -212,8 +256,8 @@ header{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     font-family: 'Kaisei Opti';
-    
-   
+
+
 
 }
 

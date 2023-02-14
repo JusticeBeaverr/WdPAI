@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 
+<?php require('public/views/sessionValidator.php') ?>
+
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/events.css">
-
-    <script src="https://kit.fontawesome.com/366b02c975.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./public/js/search.js" defer></script>
-    <script type="text/javascript" src="./public/js/stats.js" defer></script>
-    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="public/css/settings.css">
+    <title>Settings</title>
 </head>
 
 <body>
@@ -27,24 +25,29 @@
             </div>
         </header>
 
-        <section class="events">
-            <?php require('public/views/displayEvents.php'); ?>
+        <section class="settings">
+            <div class="login-container">
+
+                <form class="login" action="settings" method="POST">
+                    <label for="info">Change your information</label>
+                    <input name="name" type="text" placeholder="name">
+                    <input name="lastname" type="text" placeholder="surname">
+                    <input name="username" type="text" placeholder="username">
+                    <input name="email" type="email" placeholder="email">
+                    <input name="password" type="password" placeholder="password">
+                    <input name="confirmedPassword" type="password" placeholder="re-enter password">
+                    <p></p>
+                    <button class="loginButton" type="submit">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> &nbsp; Save
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 </div>
 </body>
 
-<?php require('public/views/eventTemplate.php') ?>
-
 <style>
-
-    section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2em;
-        padding: 2em;
-        overflow: auto;
-    }
     .add-event{
         background: #CCC5C5 ;
         border: 1px solid black;
@@ -83,10 +86,14 @@
         color: rgba(0, 0, 0, 0.5);
         border: 1px;
         padding: 1em;
-        margin: 1px;
+        margin: 2px;
         width: 70%;
     }
-    p.description{
-        width: 85%;
+
+    .settings input {
+        margin-bottom: 20px;
+        width: 30%;
     }
+
+    log
 </style>

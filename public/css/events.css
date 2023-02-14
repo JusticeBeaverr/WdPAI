@@ -16,7 +16,7 @@ section>div>img {
 section>div>div {
     height: 50%;
     width: 100%;
-
+    text-align: left;
 
     margin: 1em;
     display: flex;
@@ -44,4 +44,8 @@ section.events-form{
 .events-form>form{
     display: flex;
     flex-direction: column;
+}
+
+p.description{
+    width: 90%;
 }
