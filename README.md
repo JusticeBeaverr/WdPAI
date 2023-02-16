@@ -38,7 +38,6 @@
       <li>Change your account settings</li>
       <li>Admins can delete events</li>
     </ul>
-    
-    <h2>demo</h2>
+
     </body>
 	
