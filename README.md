@@ -39,5 +39,4 @@
       <li>Admins can delete events</li>
     </ul>
 
-    </body>
 	
