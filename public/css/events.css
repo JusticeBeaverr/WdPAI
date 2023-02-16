@@ -49,3 +49,37 @@ section.events-form{
 p.description{
     width: 90%;
 }
+
+@media (max-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    section > div {
+        margin-bottom: 1em;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #00C896;
+    }
+
+    section > div > img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    section > div > div {
+        text-align: center;
+        margin: 1em;
+        height: auto;
+    }
+
+    .events-form {
+        padding: 1em;
+    }
+
+    p.description {
+        width: 100%;
+    }
+}

@@ -76,67 +76,7 @@ input, textarea {
 
 
 
-@media only screen and (max-device-width: 420px) {
 
-    .base-container {
-        flex-direction: column;
-        align-content: flex-start;
-    }
-
-    nav, main {
-        width: 100%;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-    }
-
-    main {
-        height: 90vh;
-    }
-
-
-    ul {
-        top: 240px;
-        position: absolute;
-        height: 102vh;
-        background-color: gray;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        right: 0;
-        justify-content: flex-start;
-        gap: 5vh;
-        display: none;
-    }
-
-    ul.active {
-        display: flex;
-    }
-
-    li:last-child {
-        position: relative;
-    }
-
-    li {
-        height: 5vh;
-    }
-
-    .button {
-        width: 80vw;
-        font-size: 50px;
-    }
-
-    .title-bar{
-        font-size: 30px;
-    }
-
-    .add-event i {
-        font-size: 25px;
-    }
-}
 
 
 .base-container{
@@ -268,3 +208,59 @@ header{
     outline: none;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .login-container > form {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    button {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    ul {
+        height: auto;
+        margin: 1em 0;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+    }
+
+    li:last-child {
+        position: static;
+    }
+}

@@ -89,4 +89,61 @@
     p.description{
         width: 85%;
     }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        .login-container > form {
+            width: 100%;
+            height: auto;
+            padding: 1em;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin: 0.5em 0;
+        }
+
+        button {
+            width: 100%;
+            margin: 1em 0;
+        }
+
+        nav {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        ul {
+            height: auto;
+            margin: 1em 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        li:last-child {
+            position: static;
+        }
+    }
 </style>
