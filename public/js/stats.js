@@ -1,5 +1,6 @@
 const likeButtons = document.querySelectorAll(".fa-check");
 const dislikeButtons = document.querySelectorAll(".fa-x");
+const uncertainButtons = document.querySelectorAll(".fa-x");
 
 
 function giveLike() {

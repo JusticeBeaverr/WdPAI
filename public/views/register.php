@@ -39,8 +39,8 @@
 
 <style>
     form.register{
-        width: 40vw;
-        height: 80vh;
+        width: 70vw;
+        height: 100%;
     }
 a{
     color: black;

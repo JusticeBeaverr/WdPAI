@@ -30,22 +30,3 @@ form.login {
     box-shadow: 0 3px 6px gray;
     justify-self: center;
 }
-
-@media only screen and (max-device-width: 420px) {
-
-    nav {
-        height: 20%;
-    }
-
-
-
-    form.login {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    input, .loginButton, .title-bar {
-        font-size: 40px;
-    }
-}

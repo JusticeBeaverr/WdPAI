@@ -46,3 +46,14 @@ if ($_SESSION['admin'] === false) {
     </main>
 </div>
 </body>
+<style>
+
+    .login-container>form {
+        width: 100%;
+        height: 80%;
+
+    }
+
+</style>
+
+
